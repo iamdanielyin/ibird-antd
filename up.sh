@@ -1,6 +1,6 @@
 #!/bin/bash
 
-name="ibird-boilerplate-admin"
+name="ibird-antd"
 docker rm -f $name
 docker run --restart=always -d \
     --name $name \
