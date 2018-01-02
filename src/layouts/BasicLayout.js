@@ -268,6 +268,7 @@ class BasicLayout extends React.PureComponent {
           breakpoint="md"
           onCollapse={this.onCollapse}
           width={256}
+          collapsedWidth={0}
           className={styles.sider}
         >
           <div className={styles.logo}>

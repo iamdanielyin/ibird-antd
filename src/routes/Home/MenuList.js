@@ -96,13 +96,13 @@ export default class MenuList extends PureComponent {
                 md={16}
               >
                 <ButtonGroup className={styles.buttonGroup}>
-                  <Button type="primary" icon="plus">新建</Button>
-                  <Button type="danger" icon="minus">删除</Button>
-                  <Button type="default" icon="upload">导入</Button>
-                  <Button type="default" icon="export">导出</Button>
+                  <Button type="primary" size="small" icon="plus">新建</Button>
+                  <Button type="danger" size="small" icon="minus">删除</Button>
+                  <Button type="default" size="small" icon="upload">导入</Button>
+                  <Button type="default" size="small" icon="export">导出</Button>
                 </ButtonGroup>
                 <ButtonGroup className={styles.buttonGroup}>
-                  <Button type="default" icon="reload">刷新</Button>
+                  <Button type="default" size="small" icon="reload">刷新</Button>
                 </ButtonGroup>
               </Col>
               <Col
