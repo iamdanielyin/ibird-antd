@@ -1,92 +1,133 @@
-import { stringify } from 'qs';
+/*
+ * 通用接口操作模块
+ * @Author: yinfxs
+ * @Date: 2017-09-02 08:41:11
+ * @Last Modified by: yinfxs
+ * @Last Modified time: 2018-01-06 10:34:59
+ */
+
 import request from '../utils/request';
 
-export async function queryProjectNotice() {
-  return request('/mock/api/project/notice');
+/**
+ * 常规GET请求
+ * @param url
+ * @param onError
+ * @returns {Object}
+ */
+export function get({ url, onError }) {
+  return request({ url, onError });
 }
 
-export async function queryActivities() {
-  return request('/mock/api/activities');
-}
-
-export async function queryRule(params) {
-  return request(`/mock/api/rule?${stringify(params)}`);
-}
-
-export async function removeRule(params) {
-  return request('/mock/api/rule', {
-    method: 'POST',
-    body: {
-      ...params,
-      method: 'delete',
+/**
+ * 常规POST请求
+ * @param url
+ * @param onError
+ * @returns {Object}
+ */
+export function post({ url, body, onError }) {
+  return request({
+    url,
+    options: {
+      method: 'POST',
+      body: JSON.stringify(body, null, 0),
     },
+    onError,
   });
 }
 
-export async function addRule(params) {
-  return request('/mock/api/rule', {
-    method: 'POST',
-    body: {
-      ...params,
-      method: 'post',
+/**
+ * 常规PUT请求
+ * @param url
+ * @param onError
+ * @returns {Object}
+ */
+export function put({ url, body, onError }) {
+  return request({
+    url,
+    options: {
+      method: 'PUT',
+      body: JSON.stringify(body, null, 0),
     },
+    onError,
   });
 }
 
-export async function fakeSubmitForm(params) {
-  return request('/mock/api/forms', {
-    method: 'POST',
-    body: params,
+/**
+ * 常规DELETE请求
+ * @param url
+ * @param onError
+ * @returns {Object}
+ */
+export function del({ url, body, onError }) {
+  return request({
+    url,
+    options: {
+      method: 'DELETE',
+      body: JSON.stringify(body, null, 0),
+    },
+    onError,
   });
 }
 
-export async function fakeChartData() {
-  return request('/mock/api/fake_chart_data');
+/**
+ * 调用模型默认列表查询接口
+ * @param url
+ * @param onError
+ * @returns {Object}
+ */
+export function list({ url, onError }) {
+  return get({ url, onError });
 }
 
-export async function queryTags() {
-  return request('/mock/api/tags');
+/**
+ * 调用模型默认单个查询接口
+ * @param url
+ * @param onError
+ * @returns {Object}
+ */
+export function one({ url, onError }) {
+  return get({ url, onError });
 }
 
-export async function queryBasicProfile() {
-  return request('/mock/api/profile/basic');
+/**
+ * 调用模型默认ID查询接口
+ * @param url
+ * @param onError
+ * @returns {Object}
+ */
+export function id({ url, onError }) {
+  return get({ url, onError });
 }
 
-export async function queryAdvancedProfile() {
-  return request('/mock/api/profile/advanced');
+/**
+ * 调用模型默认新增接口
+ * @param url
+ * @param body
+ * @param onError
+ * @returns {Object}
+ */
+export function create({ url, body = {}, onError }) {
+  return post({ url, body, onError });
 }
 
-export async function queryFakeList(params) {
-  return request(`/mock/api/fake_list?${stringify(params)}`);
+/**
+ * 调用模型默认修改接口
+ * @param url
+ * @param body
+ * @param onError
+ * @returns {Object}
+ */
+export function update({ url, body = {}, onError }) {
+  return put({ url, body, onError });
 }
 
-export async function accountLogin(params) {
-  return request('/api/login', {
-    method: 'POST',
-    body: params,
-  });
-}
-
-export async function accountLogout() {
-  return request('/api/logout', {
-    method: 'POST',
-  });
-}
-
-export async function fakeMobileLogin(params) {
-  return request('/mock/api/login/mobile', {
-    method: 'POST',
-    body: params,
-  });
-}
-
-export async function fakeRegister(params) {
-  return request('/mock/api/register', {
-    method: 'POST',
-    body: params,
-  });
-}
-
-export async function queryNotices() {
-  return request('/mock/api/notices');
+/**
+ * 调用模型默认删除接口
+ * @param url
+ * @param body
+ * @param onError
+ * @returns {Object}
+ */
+export function remove({ url, body = {}, onError }) {
+  return del({ url, body, onError });
 }

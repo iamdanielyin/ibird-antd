@@ -110,7 +110,7 @@ class AdvancedForm extends PureComponent {
                     rules: [{ required: true, message: '请输入仓库名称' }],
                   })(
                     <Input placeholder="请输入仓库名称" />
-                  )}
+                    )}
                 </Form.Item>
               </Col>
               <Col xl={{ span: 6, offset: 2 }} lg={{ span: 8 }} md={{ span: 12 }} sm={24}>
@@ -124,7 +124,7 @@ class AdvancedForm extends PureComponent {
                       addonAfter=".com"
                       placeholder="请输入"
                     />
-                  )}
+                    )}
                 </Form.Item>
               </Col>
               <Col xl={{ span: 8, offset: 2 }} lg={{ span: 10 }} md={{ span: 24 }} sm={24}>
@@ -136,7 +136,7 @@ class AdvancedForm extends PureComponent {
                       <Option value="xiao">付晓晓</Option>
                       <Option value="mao">周毛毛</Option>
                     </Select>
-                  )}
+                    )}
                 </Form.Item>
               </Col>
             </Row>
@@ -150,7 +150,7 @@ class AdvancedForm extends PureComponent {
                       <Option value="xiao">付晓晓</Option>
                       <Option value="mao">周毛毛</Option>
                     </Select>
-                  )}
+                    )}
                 </Form.Item>
               </Col>
               <Col xl={{ span: 6, offset: 2 }} lg={{ span: 8 }} md={{ span: 12 }} sm={24}>
@@ -159,7 +159,7 @@ class AdvancedForm extends PureComponent {
                     rules: [{ required: true, message: '请选择生效日期' }],
                   })(
                     <RangePicker placeholder={['开始日期', '结束日期']} style={{ width: '100%' }} />
-                  )}
+                    )}
                 </Form.Item>
               </Col>
               <Col xl={{ span: 8, offset: 2 }} lg={{ span: 10 }} md={{ span: 24 }} sm={24}>
@@ -171,7 +171,7 @@ class AdvancedForm extends PureComponent {
                       <Option value="private">私密</Option>
                       <Option value="public">公开</Option>
                     </Select>
-                  )}
+                    )}
                 </Form.Item>
               </Col>
             </Row>
@@ -186,7 +186,7 @@ class AdvancedForm extends PureComponent {
                     rules: [{ required: true, message: '请输入' }],
                   })(
                     <Input placeholder="请输入" />
-                  )}
+                    )}
                 </Form.Item>
               </Col>
               <Col xl={{ span: 6, offset: 2 }} lg={{ span: 8 }} md={{ span: 12 }} sm={24}>
@@ -195,7 +195,7 @@ class AdvancedForm extends PureComponent {
                     rules: [{ required: true, message: '请选择' }],
                   })(
                     <Input placeholder="请输入" />
-                  )}
+                    )}
                 </Form.Item>
               </Col>
               <Col xl={{ span: 8, offset: 2 }} lg={{ span: 10 }} md={{ span: 24 }} sm={24}>
@@ -207,7 +207,7 @@ class AdvancedForm extends PureComponent {
                       <Option value="xiao">付晓晓</Option>
                       <Option value="mao">周毛毛</Option>
                     </Select>
-                  )}
+                    )}
                 </Form.Item>
               </Col>
             </Row>
@@ -221,7 +221,7 @@ class AdvancedForm extends PureComponent {
                       <Option value="xiao">付晓晓</Option>
                       <Option value="mao">周毛毛</Option>
                     </Select>
-                  )}
+                    )}
                 </Form.Item>
               </Col>
               <Col xl={{ span: 6, offset: 2 }} lg={{ span: 8 }} md={{ span: 12 }} sm={24}>
@@ -234,7 +234,7 @@ class AdvancedForm extends PureComponent {
                       style={{ width: '100%' }}
                       getPopupContainer={trigger => trigger.parentNode}
                     />
-                  )}
+                    )}
                 </Form.Item>
               </Col>
               <Col xl={{ span: 8, offset: 2 }} lg={{ span: 10 }} md={{ span: 24 }} sm={24}>
@@ -246,7 +246,7 @@ class AdvancedForm extends PureComponent {
                       <Option value="private">私密</Option>
                       <Option value="public">公开</Option>
                     </Select>
-                  )}
+                    )}
                 </Form.Item>
               </Col>
             </Row>

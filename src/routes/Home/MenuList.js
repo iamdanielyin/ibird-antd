@@ -20,19 +20,48 @@ const getValue = obj => Object.keys(obj).map(key => obj[key]).join(',');
 export default class MenuList extends PureComponent {
   state = {
     selectedRowKeys: [],
-    columns: [{
-      title: '姓名',
-      dataIndex: 'name',
-      key: 'name',
-    }, {
-      title: '年龄',
-      dataIndex: 'age',
-      key: 'age',
-    }, {
-      title: '住址',
-      dataIndex: 'address',
-      key: 'address',
-    }],
+    columns: [
+      {
+        title: '菜单名称',
+        dataIndex: 'name',
+        key: 'name',
+      },
+      {
+        title: '菜单地址',
+        dataIndex: 'uri',
+        key: 'uri',
+      },
+      {
+        title: '菜单图标',
+        dataIndex: 'icon',
+        key: 'icon',
+      },
+      {
+        title: '父级菜单',
+        dataIndex: 'parent',
+        key: 'parent',
+      },
+      {
+        title: '是否启用',
+        dataIndex: 'is_active',
+        key: 'is_active',
+      },
+      {
+        title: '是否外链',
+        dataIndex: 'is_out',
+        key: 'is_out',
+      },
+      {
+        title: '关联权限',
+        dataIndex: 'permission',
+        key: 'permission',
+      },
+      {
+        title: '显示顺序',
+        dataIndex: 'order',
+        key: 'order',
+      },
+    ],
   };
 
   componentDidMount() {
@@ -82,11 +111,11 @@ export default class MenuList extends PureComponent {
     }];
 
     return (
-      <PageHeaderLayout
-        title="菜单列表"
-      // content={content}
-      >
-        <Card bordered={false}>
+      <PageHeaderLayout>
+        <Card
+          title="菜单列表"
+          bordered={false}
+        >
           <div className={styles.tableHeader}>
             <Row>
               <Col
@@ -96,13 +125,13 @@ export default class MenuList extends PureComponent {
                 md={16}
               >
                 <ButtonGroup className={styles.buttonGroup}>
-                  <Button type="primary" size="small" icon="plus">新建</Button>
-                  <Button type="danger" size="small" icon="minus">删除</Button>
-                  <Button type="default" size="small" icon="upload">导入</Button>
-                  <Button type="default" size="small" icon="export">导出</Button>
+                  <Button type="primary" size="default" icon="plus">新建</Button>
+                  <Button type="danger" size="default" icon="minus">删除</Button>
+                  <Button type="default" size="default" icon="upload">导入</Button>
+                  <Button type="default" size="default" icon="export">导出</Button>
                 </ButtonGroup>
                 <ButtonGroup className={styles.buttonGroup}>
-                  <Button type="default" size="small" icon="reload">刷新</Button>
+                  <Button type="default" size="default" icon="reload">刷新</Button>
                 </ButtonGroup>
               </Col>
               <Col

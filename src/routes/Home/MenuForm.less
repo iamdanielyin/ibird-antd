@@ -1,61 +1,19 @@
 @import "~antd/lib/style/themes/default.less";
 @import "../../utils/utils.less";
-.tableList {
-    .tableListOperator {
-        margin-bottom: 16px;
-        button {
-            margin-right: 8px;
-        }
-    }
+.content {
+    font-size: 14px;
 }
 
-.tableListForm {
-     :global {
-        .ant-form-item {
-            margin-bottom: 24px;
-            margin-right: 0;
-            display: flex;
-            >.ant-form-item-label {
-                width: auto;
-                line-height: 32px;
-                padding-right: 8px;
-            }
-        }
-        .ant-form-item-control-wrapper {
-            flex: 1;
-        }
-    }
-    .submitButtons {
-        white-space: nowrap;
-        margin-bottom: 24px;
-    }
+.footerClassName {
+    display: none;
 }
 
-@media screen and (max-width: @screen-lg) {
-    .tableListForm :global(.ant-form-item) {
-        margin-right: 24px;
-    }
+.extraButton {
+    margin-left: 5px;
 }
 
-@media screen and (max-width: @screen-md) {
-    .tableListForm :global(.ant-form-item) {
-        margin-right: 8px;
-    }
-}
-
-.buttonGroup {
-    margin-right: 10px;
-}
-
-.tableHeader {
-    margin-bottom: 15px;
-}
-
-@media screen and (max-width: @screen-md) {
-    .tableSearch {
-        margin-top: 8px;
-    }
-    .buttonGroup {
-        margin-bottom: 5px;
+:global {
+    .ant-btn-group {
+        margin: 0 5px;
     }
 }

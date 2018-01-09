@@ -66,7 +66,7 @@ export default class Login extends Component {
           <FormItem>
             {getFieldDecorator('username', {
               rules: [{
-                required: true, message: '请输入账户名！',
+                required: true, message: '请输入账户名',
               }],
             })(
               <Input
@@ -79,7 +79,7 @@ export default class Login extends Component {
           <FormItem>
             {getFieldDecorator('password', {
               rules: [{
-                required: true, message: '请输入密码！',
+                required: true, message: '请输入密码',
               }],
             })(
               <Input

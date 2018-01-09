@@ -22,12 +22,12 @@ export const getNavData = app => [
         children: [
           {
             name: '菜单管理',
-            path: 'menuList',
+            path: 'menu-list',
             component: dynamicWrapper(app, ['menu'], () => import('../routes/Home/MenuList')),
           },
           {
             name: '菜单编辑',
-            path: 'menuForm',
+            path: 'menu-form',
             component: dynamicWrapper(app, ['menu'], () => import('../routes/Home/MenuForm')),
           },
           // {
